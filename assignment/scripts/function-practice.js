@@ -63,21 +63,33 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 let fakeArray = []; // declare array
 
 function getLast( array ) {
-  if (fakeArray.length === 0) {
-    // console.log('empty');
-  return fakeArray;
-  }
-}
+  if (fakeArray.length === 0) { // conditional
+    return undefined;
+  } // end array empty
+  else {
+    return fakeArray[fakeArray.length -1]; // .length - 1 determines last element
+  } // end of return last item
+} // end of getLast
 
-console.log('This array is:', getLast());
-/*
+console.log('This array is:', getLast()); // logs outcome
+
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
+
+let anotherArray = []; // declare array
+
 function find( value, array ){
+  if () { // conditional
+    return true;
+  } // end value found
+  else {
+    return false;
+  } // end value not found
+} // end find
 
-}
-
+console.log('The value of anotherArray is:', find());
+/*
 // ----------------------
 // Stretch Goals
 // ----------------------
