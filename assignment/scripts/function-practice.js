@@ -18,22 +18,23 @@ function helloName( name ) {
 } // end helloName
 
 // Remember to call the function to test
-console.log('Hello,', helloName(), '!');
+console.log(`Hello, ${helloName()}!`);
 
 // 3. Function to add two numbers together & return the result
 // return firstNumber + secondNumber;
 function addNumbers( firstNumber, secondNumber ) {
-  let answer = firstNumber + secondNumber;
-  return answer;
+  let answer = firstNumber + secondNumber; // stores value of two variables added
+  return answer; // stores number value
 }
-console.log('This is the firstNumber plus the secondNumber:', addNumbers(1324324,25435432));
-/*
+console.log(`This is the firstNumber plus the secondNumber: ${addNumbers(1324324, 25435432)}`);
+
 // 4. Function to multiply three numbers & return the result
-function multiplyThree(numOne, numTwo, numThree ){
+function multiplyThree(numOne, numTwo, numThree ) {
   let answer = numOne * numTwo * numThree;
   return answer;
 }
-console.log('This is the answer of 3 numbers multiplied:', multiplyThree(867, 530, 9));
+// console.log('This is the answer of 3 numbers multiplied:', multiplyThree(867, 530, 9));
+console.log(`This is three numbers multiplied: ${multiplyThree(867, 530, 9)}`);
 
 // 5. Function that will return true if a number is positive,
 //    or greater than zero, and false otherwise
@@ -48,10 +49,10 @@ function isPositive( number ) {
 }
 // Call the function to test each outcome (true & false)
 // Write a separate console.log statement for each outcome
-console.log( 'isPositive - should say true', isPositive(3) );
-console.log( 'isPositive - should say false', isPositive(0) );
-console.log( 'isPositive - should say false', isPositive(-3) );
-
+console.log(`isPositive - should say true: ${isPositive(3)}`);
+console.log(`isPositive - should say true: ${isPositive(0)}`);
+console.log(`isPositive - should say false: ${isPositive(-3)}`);
+/*
 // 6. Function to return the _last_ item in an array. If the
 //    array is empty, return `undefined`.
 
