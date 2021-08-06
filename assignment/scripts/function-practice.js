@@ -52,49 +52,37 @@ function isPositive( number ) {
 console.log(`isPositive - should say true: ${isPositive(3)}`);
 console.log(`isPositive - should say true: ${isPositive(0)}`);
 console.log(`isPositive - should say false: ${isPositive(-3)}`);
-/*
+
 // 6. Function to return the _last_ item in an array. If the
 //    array is empty, return `undefined`.
-
-// delcare array
-// return last item in array
-// if array empty, return undefined
-
-let fakeArray = []; // declare array
+let fakeArray = [];
 
 function getLast( array ) {
-  if (fakeArray.length === 0) { // conditional
-    return undefined;
-  } // end array empty
+  if(fakeArray.length === 0) { // checks to see if array is empty
+    return 'undefined';
+  } // end checking if array is empty
   else {
-    return fakeArray[fakeArray.length -1]; // .length - 1 determines last element
-  } // end of return last item
-} // end of getLast
+    let lastItem = fakeArray.pop(); // removes last itme in array and stores value in variable
+    return lastItem;
+  } // end removing last itme in array
+} // end getLast
 
-console.log('This array is:', getLast()); // logs outcome
+console.log(`The last item in this array is: ${getLast()}`);
 
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
+function find( value, array ){
 
-// let anotherArray = []; // declare array
-//
-// function find( value, array ){
-//   if () { // conditional
-//     return true;
-//   } // end value found
-//   else {
-//     return false;
-//   } // end value not found
-// } // end find
-//
-// console.log('The value of anotherArray is:', find());
+}
 
 // ----------------------
 // Stretch Goals
 // ----------------------
 // 8. Function to check if a letter is the first letter in a
 //    string. Return true if it is, and false otherwise
+
+/*
 let sillyString = 'zebra';
 
 function isFirstLetter(letter, string) {
@@ -107,7 +95,7 @@ function isFirstLetter(letter, string) {
 }
 console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
-/*
+
 // 9. Function to return the sum of all numbers in an array
 function sumAll( ) {
   let sum = 0
