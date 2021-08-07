@@ -57,21 +57,18 @@ console.log(`isPositive - should say false: ${isPositive(-3)}`);
 // 6. Function to return the _last_ item in an array. If the
 //    array is empty, return `undefined`.
 
-// declare array
-// determine if array is empty
-// if empty return 'undefined'
-// determine if last number of array
-
-let array = [9];
-let lastNumber = array.pop();
+let sillyString = ['cheese', 'licorice', 'zucchini', 'spaghetti']; // test 1
+// let sillyString = []; // test 2
 
 function getLast( array ) {
-  console.log('inside getLast');
-  return lastNumber;
+  let lastItem = sillyString.pop(); // stores last element value of sillyString in lastItem variable
+    return lastItem;
+  if (sillyString.length === 0) { // checks sillyString to see if it's empty
+    return 'undefined';
+  }
 }
 
-getLast();
-console.log(`Output is last number in array or is empty and 'undefined': ${array[0]}`);
+console.log(`this should output undefined: ${getLast()}`);
 
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
@@ -126,7 +123,7 @@ let bobMarray = [3, 1, 4, 1, 5, 9, -66]; // test 1
 
 function bePositive() {
   let allPositive = []; // empty array to collect positive numbers
-  for(let i=0; i<bobMarray.length; i+=1) { // for loop that starts at the beginning of the array and works thru to the end while running code in {} after each element
+  for (let i=0; i<bobMarray.length; i+=1) { // for loop that starts at the beginning of the array and works thru to the end while running code in {} after each element
     if (bobMarray[i] > 0) {
         allPositive.push(bobMarray[i]); // puts positive number in bobMarray
     }
@@ -136,8 +133,7 @@ function bePositive() {
 
 console.log(`bobMarray has these positive numbers: ${bePositive(bobMarray)}`);
 // console.log(bobMarray); // checks to see if input array has not changed
-/*
+
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
 //     here in a comment, write the function, and test it!
-*/
