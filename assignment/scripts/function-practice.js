@@ -73,20 +73,24 @@ console.log(`this should output undefined: ${getLast()}`);
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
-// let beverlyHills = [9, 0, 2, 1, 0];
-//
-// function find( value, array ) {
-//   if ()
-// }
-//   for (let i = 0; i < 5; i += 1) {
-//     if (i = beverlyHills) {
-//       return true;
-//     }
-// }
-//
-// console.log(`The value is: ${find()}`);
+let box = ['legos', 'slinky', 'ball'];
 
+function find( value, array ){
+  // value in array is found
+  // for (let i=0; i < toyBox.length; i++)
+  for ( let toy of box )
+  if ( toy === box) {
+    return true;
+  }
+  else {
+    return false;
+  }
+}
 
+console.log(`The toy was found: ${find('slinky')}`);
+// console.log(`The toy was found: ${find('blanket')}`);
+
+/*
 // ----------------------
 // Stretch Goals
 // ----------------------
@@ -137,3 +141,4 @@ console.log(`bobMarray has these positive numbers: ${bePositive(bobMarray)}`);
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
 //     here in a comment, write the function, and test it!
+*/
