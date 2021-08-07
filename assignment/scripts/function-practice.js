@@ -40,14 +40,14 @@ console.log(`This is three numbers multiplied: ${multiplyThree(867, 530, 09)}`);
 // 5. Function that will return true if a number is positive,
 //    or greater than zero, and false otherwise
 function isPositive( number ) {
-  if ( number > 0 ){ // number greater than 0
-    return true;
-  } else if ( number === 0 ) { // number equal to 0
-    return false;
-  } else { // everything else which means negative numbers
-    return false;
+  if ( number >= 0 ) { // number greater and equal to 0
+      return true;
+    }
+    else { // everything else including negative numbers
+      return false;
+    }
   }
-}
+
 // Call the function to test each outcome (true & false)
 // Write a separate console.log statement for each outcome
 console.log(`isPositive - should say true: ${isPositive(3)}`);
@@ -57,18 +57,18 @@ console.log(`isPositive - should say false: ${isPositive(-3)}`);
 // 6. Function to return the _last_ item in an array. If the
 //    array is empty, return `undefined`.
 
-let sillyString = ['cheese', 'licorice', 'zucchini', 'spaghetti']; // test 1
-// let sillyString = []; // test 2
+let silly = ['string', 'juice','putty', 'goose']; // test 1
+// let silly = []; // test 2
 
 function getLast( array ) {
-  let lastItem = sillyString.pop(); // stores last element value of sillyString in lastItem variable
+  let lastItem = silly.pop(); // stores last element value of silly in lastItem variable
     return lastItem;
-  if (sillyString.length === 0) { // checks sillyString to see if it's empty
+  if (silly.length === 0) { // checks silly to see if it's empty
     return 'undefined';
   }
 }
 
-console.log(`this should output undefined: ${getLast()}`);
+console.log(`Something silly or undefined if it's empty: ${getLast()}`);
 
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
