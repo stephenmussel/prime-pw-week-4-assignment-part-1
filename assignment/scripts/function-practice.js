@@ -14,7 +14,7 @@ console.log('Test - should say "Hello World!"', hello());
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 function helloName( name ) {
-  return 'Jo'; // stores string value
+  return 'Marlanval'; // stores string value
 } // end helloName
 
 // Remember to call the function to test
@@ -24,26 +24,27 @@ console.log(`Hello, ${helloName()}!`);
 // return firstNumber + secondNumber;
 function addNumbers( firstNumber, secondNumber ) {
   let answer = firstNumber + secondNumber; // stores value of two variables added
-  return answer; // stores number value
-}
-console.log(`This is the firstNumber plus the secondNumber: ${addNumbers(1324324, 25435432)}`);
+  return answer.toLocaleString("en-US"); // method that formats number with commas specified in language and region. if argument is not included it defaults to local settings?
+} // end addNumbers
+
+console.log(`The firstNumber plus the secondNumber is: ${addNumbers(1324324, 25435432)}`);
 
 // 4. Function to multiply three numbers & return the result
-function multiplyThree(numOne, numTwo, numThree ) {
+function multiplyThree( numOne, numTwo, numThree ) {
   let answer = numOne * numTwo * numThree;
-  return answer;
+  return answer.toLocaleString(); // method that formats number with commas based on default settings since parameters are not specified.
 }
-// console.log('This is the answer of 3 numbers multiplied:', multiplyThree(867, 530, 9));
-console.log(`This is three numbers multiplied: ${multiplyThree(867, 530, 9)}`);
+
+console.log(`This is three numbers multiplied: ${multiplyThree(867, 530, 09)}`);
 
 // 5. Function that will return true if a number is positive,
 //    or greater than zero, and false otherwise
 function isPositive( number ) {
-  if ( number > 0 ){ // number greater than 0 and positive
+  if ( number > 0 ){ // number greater than 0
     return true;
   } else if ( number === 0 ) { // number equal to 0
     return false;
-  } else { // everything else
+  } else { // everything else which means negative numbers
     return false;
   }
 }
@@ -55,54 +56,67 @@ console.log(`isPositive - should say false: ${isPositive(-3)}`);
 
 // 6. Function to return the _last_ item in an array. If the
 //    array is empty, return `undefined`.
-let fakeArray = [];
+
+// declare array
+// determine if array is empty
+// if empty return 'undefined'
+// determine if last number of array
+
+let array = [9];
+let lastNumber = array.pop();
 
 function getLast( array ) {
-  if(fakeArray.length === 0) { // checks to see if array is empty
-    return 'undefined';
-  } // end checking if array is empty
-  else {
-    let lastItem = fakeArray.pop(); // removes last itme in array and stores value in variable
-    return lastItem;
-  } // end removing last itme in array
-} // end getLast
+  console.log('inside getLast');
+  return lastNumber;
+}
 
-console.log(`The last item in this array is: ${getLast()}`);
+getLast();
+console.log(`Output is last number in array or is empty and 'undefined': ${array[0]}`);
 
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
-function find( value, array ){
+// let beverlyHills = [9, 0, 2, 1, 0];
+//
+// function find( value, array ) {
+//   if ()
+// }
+//   for (let i = 0; i < 5; i += 1) {
+//     if (i = beverlyHills) {
+//       return true;
+//     }
+// }
+//
+// console.log(`The value is: ${find()}`);
 
-}
 
 // ----------------------
 // Stretch Goals
 // ----------------------
 // 8. Function to check if a letter is the first letter in a
 //    string. Return true if it is, and false otherwise
-
-/*
-let sillyString = 'zebra';
-
 function isFirstLetter(letter, string) {
-  if (sillyString.charAt(0) === 'a') {
-    return true;
-  }
-  else {
-    return false;
-  }
+  return letter.charAt(0) === string.charAt(0); // charAt is a method that returns string of specified index
 }
+
 console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 
 // 9. Function to return the sum of all numbers in an array
+let beverlyHills = [9, 0, 2, 1, 0]; // sample array 1
+// let beverlyHills = []; // sample array 2
+
 function sumAll( ) {
   let sum = 0
   // TODO: loop to add items
+  for (let i=0; i<beverlyHills.length; i += 1) { // i starts at 0. while i is less than length of array, run code in {}. then increment i by 1
+    sum += beverlyHills[i]; // can also be written sum = sum + beverlyHills[i]
+  }
   return sum;
 }
 
+console.log(`The sum of this array is: ${sumAll()}`); // sample array 1 outputs 12. sample array 2 outputs 0
+/*
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
