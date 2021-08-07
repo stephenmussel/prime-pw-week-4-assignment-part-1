@@ -116,13 +116,27 @@ function sumAll( ) {
 }
 
 console.log(`The sum of this array is: ${sumAll()}`); // sample array 1 outputs 12. sample array 2 outputs 0
-/*
+
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
+let bobMarray = [3, 1, 4, 1, 5, 9, -66]; // test 1
+// let bobMarray = [-3, 0, 'a', '@', 2 ]; // test 2
+// let bobMarray = []; // test 3
 
+function bePositive() {
+  let allPositive = []; // empty array to collect positive numbers
+  for(let i=0; i<bobMarray.length; i+=1) { // for loop that starts at the beginning of the array and works thru to the end while running code in {} after each element
+    if (bobMarray[i] > 0) {
+        allPositive.push(bobMarray[i]); // puts positive number in bobMarray
+    }
+  }
+  return allPositive;
+}
 
-
+console.log(`bobMarray has these positive numbers: ${bePositive(bobMarray)}`);
+// console.log(bobMarray); // checks to see if input array has not changed
+/*
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
 //     here in a comment, write the function, and test it!
