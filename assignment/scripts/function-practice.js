@@ -57,7 +57,7 @@ console.log(`isPositive - should say false: ${isPositive(-3)}`);
 // 6. Function to return the _last_ item in an array. If the
 //    array is empty, return `undefined`.
 
-let silly = ['string', 'juice','putty', 'goose']; // test 1
+let silly = ['string', 'juice', 'putty', 'goose']; // test 1
 // let silly = []; // test 2
 
 function getLast( array ) {
@@ -73,22 +73,18 @@ console.log(`Something silly or undefined if it's empty: ${getLast()}`);
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
-let box = ['legos', 'slinky', 'ball'];
+let toyBox = ['legos', 'slinky', 'ball', 'slinky'];
+let extraToy = []; // starting to work on logic for duplicate value...to be continued
 
-function find( value, array ){
-  // value in array is found
-  // for (let i=0; i < toyBox.length; i++)
-  for ( let toy of box )
-  if ( toy === box) {
-    return true;
-  }
-  else {
-    return false;
-  }
+function find( value, array ) {
+  for (let i=0; i < toyBox.length; i++) // loops thru entire array
+    if (value === toyBox[i]) { // checks if value and array elements are equal
+      return true;
+    } return false;
 }
 
-console.log(`The toy was found: ${find('slinky')}`);
-// console.log(`The toy was found: ${find('blanket')}`);
+console.log(`The toy was found: ${find('slinky', toyBox)}`);
+console.log(`The toy was found: ${find('logs', toyBox)}`);
 
 /*
 // ----------------------
