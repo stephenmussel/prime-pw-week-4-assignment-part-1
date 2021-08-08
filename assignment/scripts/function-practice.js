@@ -86,7 +86,6 @@ function find( value, array ) {
 console.log(`The toy was found: ${find('slinky', toyBox)}`);
 console.log(`The toy was found: ${find('logs', toyBox)}`);
 
-/*
 // ----------------------
 // Stretch Goals
 // ----------------------
@@ -137,4 +136,18 @@ console.log(`bobMarray has these positive numbers: ${bePositive(bobMarray)}`);
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
 //     here in a comment, write the function, and test it!
-*/
+
+// Create a function that takes a number as an argument. Add up all the numbers from 1 to the number you passed to the function.
+// For example, if the input is 4 then your function should return 10 because 1 + 2 + 3 + 4 = 10.
+// SOURCE: https://edabit.com/challenge/4gzDuDkompAqujpRi
+
+function addingUp(num) {
+  let sum = 0;
+  for (let i=0; i<=num; i++) { // makes sure you're adding all the numbers starting from 0 up to and including num
+    sum += i;
+  }
+  return sum;
+}
+
+console.log(`addingUp 2 should be 3: ${addingUp(2)}`);
+console.log(`addingUp 22 should be 253: ${addingUp(22)}`);
