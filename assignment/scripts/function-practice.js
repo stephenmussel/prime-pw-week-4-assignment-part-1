@@ -132,7 +132,7 @@ function find( value, array ) { // added curly braces
 
 console.log(`The toy was found: ${find('slinky', toyBox)}`); // tests for toy in toyBox
 console.log(`The toy was found: ${find('logs', toyBox)}`); // tests for toy not in toyBox
-/*
+
 // ----------------------
 // Stretch Goals
 // ----------------------
@@ -198,4 +198,3 @@ function addingUp(num) {
 
 console.log(`addingUp 2 should be 3: ${addingUp(2)}`);
 console.log(`addingUp 22 should be 253: ${addingUp(22)}`);
-*/
