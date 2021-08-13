@@ -13,12 +13,23 @@ console.log('Test - should say "Hello World!"', hello());
 
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
+
+/* Submitted for assignment
 function helloName( name ) {
   return 'Marlanval'; // stores string value
 } // end helloName
 
 // Remember to call the function to test
 console.log(`Hello, ${helloName()}!`);
+*/
+
+function helloName( name ) {
+  // return 'Marlanval'; // this is not reusable because it will always return Marlanval
+  return `Hello, ${name}`; //this returns any name passed thru the function
+} // end helloName
+
+console.log(`testing helloName: ${helloName('Marlanval')}!`); // tests helloName with Marlanval
+console.log(`testing helloName: ${helloName(123)}!`); // tests helloName with 123
 
 // 3. Function to add two numbers together & return the result
 // return firstNumber + secondNumber;
@@ -57,6 +68,7 @@ console.log(`isPositive - should say false: ${isPositive(-3)}`);
 // 6. Function to return the _last_ item in an array. If the
 //    array is empty, return `undefined`.
 
+/* Submitted for assignment
 let silly = ['string', 'juice', 'putty', 'goose']; // test 1
 // let silly = []; // test 2
 
@@ -69,10 +81,30 @@ function getLast( array ) {
 }
 
 console.log(`Something silly or undefined if it's empty: ${getLast()}`);
+*/
+
+let silly = ['string', 'juice', 'putty', 'goose']; // test 1
+// let silly = []; // test 2
+
+function getLast( array ) {
+  // let lastItem = silly.pop(); // stores last element value of silly in lastItem variable <-- this is not reusable.
+  let lastItem = array.pop(); // stores last element value of any array called in lastItem variable. in this case, the array will be silly
+
+    return lastItem;
+  // if (silly.length === 0) { // checks silly to see if it's empty <-- again, not reusable and specific to silly array
+  if (array.length === 0) { // checks array passed to see if it's empty. in this case it's silly
+    return 'undefined';
+  }
+}
+
+// console.log(`Something silly or undefined if it's empty: ${getLast()}`); can not test for any array. since silly array is built into function, it will only output that stuff
+console.log(`Something silly or undefined if it's empty: ${getLast(silly)}`); // tests getLast with silly array called
 
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
+
+/* Submitted for assignment
 let toyBox = ['legos', 'slinky', 'ball', 'slinky'];
 let extraToy = []; // starting to work on logic for duplicate value...to be continued
 
@@ -85,7 +117,22 @@ function find( value, array ) {
 
 console.log(`The toy was found: ${find('slinky', toyBox)}`);
 console.log(`The toy was found: ${find('logs', toyBox)}`);
+*/
 
+let toyBox = ['legos', 'slinky', 'ball', 'slinky'];
+let extraToy = []; // starting to work on logic for duplicate value...to be continued
+
+function find( value, array ) { // added curly braces
+  for (let i=0; i < array.length; i++) { // loops thru entire array that is passed thru. in this case toyBox
+    if (value === array[i]) { // checks if passed thru value and array elements are equal. in this case toyBox
+      return true;
+  }
+    } return false;
+}
+
+console.log(`The toy was found: ${find('slinky', toyBox)}`); // tests for toy in toyBox
+console.log(`The toy was found: ${find('logs', toyBox)}`); // tests for toy not in toyBox
+/*
 // ----------------------
 // Stretch Goals
 // ----------------------
@@ -151,3 +198,4 @@ function addingUp(num) {
 
 console.log(`addingUp 2 should be 3: ${addingUp(2)}`);
 console.log(`addingUp 22 should be 253: ${addingUp(22)}`);
+*/
